@@ -11,17 +11,25 @@ boolean answer6 = false;
 boolean answer7 = false;
 boolean answer8 = false;
 
+boolean answer9 = false;
+boolean answer10 = false;
+boolean answer11 = false;
+boolean answer12 = false;
+
 int timeCounter = 0;
-
-
+int timeCounter2 = 0;
+int timeCounter3 = 0;
 int score = 0;
 int question1 = 1; //When this is 1 display question 1, when its 2, display question 2
+
+
 void setup() {
 
   size(1280, 700);
 
   background(255);
 }
+
 
 void draw() {
 
@@ -35,8 +43,8 @@ void draw() {
   textSize(30);
   text("Score: " + score, width-225, 50);
 
-
   text (timeCounter, 30, 30);
+
 
   if (question1==1) {
     fill(0);
@@ -50,12 +58,11 @@ void draw() {
     text("d.) Madison Square Garden", 160, 480);
 
 
-
     stroke(0);
     fill(255);
     if (answer1 == true && question1 == 1) {
       fill(255, 0, 0);
-      
+
       timeCounter = timeCounter+1;
     }
     rect(100, 225, 50, 50, 4);
@@ -73,6 +80,7 @@ void draw() {
     fill(255);
     if (answer3 == true) {
       fill(255, 0, 0);
+      timeCounter = timeCounter+1;
     }
     rect(100, 375, 50, 50, 4);
 
@@ -80,6 +88,7 @@ void draw() {
     fill(255);
     if (answer4 == true) {
       fill(255, 0, 0);
+      timeCounter = timeCounter+1;
     }
     rect(100, 450, 50, 50, 4);
 
@@ -116,15 +125,16 @@ void draw() {
 
 
 
-//if time is up, go to question 2
-  if (timeCounter > 200) {
+  //if time is up, go to question 2
+  if (timeCounter > 50) {
     question1 = 2;
   }
-  
-  
-  
-  
-  
+
+
+
+
+
+
   if (question1==2) {
     fill(0);
     textSize(20);
@@ -142,13 +152,15 @@ void draw() {
     fill(255);
     if (answer5 == true) {
       fill(255, 0, 0);
+      timeCounter2 = timeCounter2+1;
     }
     rect(100, 225, 50, 50, 4);
 
     stroke(0);
     fill(255);
-    if (answer6 == true && question1 == 2) {
+    if (answer6 == true) {
       fill(255, 0, 0);
+      timeCounter2 = timeCounter2+1;
     }
     rect(100, 300, 50, 50, 4);
 
@@ -156,6 +168,7 @@ void draw() {
     fill(255);
     if (answer7 == true) {
       fill(255, 0, 0);
+      timeCounter2 = timeCounter2+1;
     }
     rect(100, 375, 50, 50, 4);
 
@@ -163,6 +176,7 @@ void draw() {
     fill(255);
     if (answer8 == true) {
       fill(0, 255, 0);
+      timeCounter2 = timeCounter2+1;
     }
     rect(100, 450, 50, 50, 4);
 
@@ -194,6 +208,89 @@ void draw() {
         score = score + 10;
       }
       answer8 = true;
+    }
+  }
+
+
+  if (timeCounter2 > 50) {
+    question1 = 3;
+  }
+
+
+  if (question1==3) {
+
+    fill(0);
+    textSize(20);
+    text("3. Who is the Leafs all time leader in assists?", 100, 200);
+
+    textSize(18);
+    text("a.) Borje Salming", 160, 255);
+    text("b.) Dion Phaneuf", 160, 330);
+    text("c.) Al Iafrate", 160, 405);
+    text("d.) Mats Sundin", 160, 480);
+
+
+
+    stroke(0);
+    fill(255);
+    if (answer9 == true) {
+      fill(0, 255, 0);
+      timeCounter3 = timeCounter3+1;
+    }
+    rect(100, 225, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer10 == true) {
+      fill(255, 0, 0);
+      timeCounter3 = timeCounter3+1;
+    }
+    rect(100, 300, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer11 == true) {
+      fill(255, 0, 0);
+      timeCounter3 = timeCounter3+1;
+    }
+    rect(100, 375, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer12 == true) {
+      fill(255, 0, 0);
+      timeCounter3 = timeCounter3+1;
+    }
+    rect(100, 450, 50, 50, 4);
+
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 225 && mouseY < 280) {
+      if (answer9 == false) {
+        score = score - 5;
+      }
+      answer9 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
+      if (answer10 == false) {
+        score = score - 5;
+        // question1= question1 + 1;
+      }
+      answer10 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 375 && mouseY < 425) {
+      if (answer11 == false) {
+        score = score - 5;
+      }
+      answer11 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 450 && mouseY < 500) {
+      if (answer12 == false) {
+        score = score + 10;
+      }
+      answer12 = true;
     }
   }
 }
