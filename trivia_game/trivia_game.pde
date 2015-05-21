@@ -5,18 +5,17 @@ boolean answer1 = false;
 boolean answer2 = false;
 boolean answer3 = false;
 boolean answer4 = false;
-int score = 0;
-int question1 = 1;
-int question2 = 2;
-int question3 = 3;
-int question4 = 4;
-int question5 = 5;
-int question6 = 6;
-int question7 = 7;
-int question8 = 8;
-int question9 = 9;
-int question10= 10;
 
+boolean answer5 = false;
+boolean answer6 = false;
+boolean answer7 = false;
+boolean answer8 = false;
+
+int timeCounter = 0;
+
+
+int score = 0;
+int question1 = 1; //When this is 1 display question 1, when its 2, display question 2
 void setup() {
 
   size(1280, 700);
@@ -37,6 +36,7 @@ void draw() {
   text("Score: " + score, width-225, 50);
 
 
+  text (timeCounter, 30, 30);
 
   if (question1==1) {
     fill(0);
@@ -53,15 +53,19 @@ void draw() {
 
     stroke(0);
     fill(255);
-    if (answer1 == true) {
+    if (answer1 == true && question1 == 1) {
       fill(255, 0, 0);
+      
+      timeCounter = timeCounter+1;
     }
     rect(100, 225, 50, 50, 4);
 
     stroke(0);
     fill(255);
-    if (answer2 == true) {
+    if (answer2 == true && question1 == 1) {
       fill(0, 255, 0);
+
+      timeCounter = timeCounter+1;
     }
     rect(100, 300, 50, 50, 4);
 
@@ -90,7 +94,7 @@ void draw() {
     if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
       if (answer2 == false) {
         score = score + 10;
-        question1= question1 +1;
+        // question1= question1 +1;
       }
       answer2 = true;
     }
@@ -107,6 +111,89 @@ void draw() {
         score = score - 5;
       }
       answer4 = true;
+    }
+  }
+
+
+
+//if time is up, go to question 2
+  if (timeCounter > 200) {
+    question1 = 2;
+  }
+  
+  
+  
+  
+  
+  if (question1==2) {
+    fill(0);
+    textSize(20);
+    text("2. Who is the Leafs all time leader in goals?", 100, 200);
+
+    textSize(18);
+    text("a.) Phil Kessel", 160, 255);
+    text("b.) Wendel Clark", 160, 330);
+    text("c.) Doug Gilmour", 160, 405);
+    text("d.) Mats Sundin", 160, 480);
+
+
+
+    stroke(0);
+    fill(255);
+    if (answer5 == true) {
+      fill(255, 0, 0);
+    }
+    rect(100, 225, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer6 == true && question1 == 2) {
+      fill(255, 0, 0);
+    }
+    rect(100, 300, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer7 == true) {
+      fill(255, 0, 0);
+    }
+    rect(100, 375, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer8 == true) {
+      fill(0, 255, 0);
+    }
+    rect(100, 450, 50, 50, 4);
+
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 225 && mouseY < 280) {
+      if (answer5 == false) {
+        score = score - 5;
+      }
+      answer5 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
+      if (answer6 == false) {
+        score = score - 5;
+        // question1= question1 + 1;
+      }
+      answer6 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 375 && mouseY < 425) {
+      if (answer7 == false) {
+        score = score - 5;
+      }
+      answer7 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 450 && mouseY < 500) {
+      if (answer8 == false) {
+        score = score + 10;
+      }
+      answer8 = true;
     }
   }
 }
