@@ -6,7 +6,16 @@ boolean answer2 = false;
 boolean answer3 = false;
 boolean answer4 = false;
 int score = 0;
-int question1= 1;
+int question1 = 1;
+int question2 = 2;
+int question3 = 3;
+int question4 = 4;
+int question5 = 5;
+int question6 = 6;
+int question7 = 7;
+int question8 = 8;
+int question9 = 9;
+int question10= 10;
 
 void setup() {
 
