@@ -21,18 +21,19 @@ boolean answer14 = false;
 boolean answer15 = false;
 boolean answer16 = false;
 
-// boolean answer17 = false;
-// boolean answer18 = false;
-// boolean answer19 = false;
-// boolean answer20 = false;
+boolean answer17 = false;
+boolean answer18 = false;
+boolean answer19 = false;
+boolean answer20 = false;
 
 int timeCounter1 = 0;
 int timeCounter2 = 0;
 int timeCounter3 = 0;
 int timeCounter4 = 0;
+int timeCounter5 = 0;
 
 int score = 0;
-int question1 = 1; //When this is 1 display question 1, when its 2, display question 2
+int question = 1; //When this is 1 display question 1, when its 2, display question 2
 
 
 void setup() {
@@ -55,11 +56,11 @@ void draw() {
   textSize(30);
   text("Score: " + score, width-225, 50);
 
-  text (timeCounter1, 30, 30);
-  text (timeCounter2, 60, 30);
+  // text (timeCounter1, 30, 30);
+  // text (timeCounter2, 60, 30);
 
 
-  if (question1==1) {
+  if (question==1) {
     fill(0);
     textSize(20);
     text("1. What was the Maple Leafs first arena called?", 100, 200);
@@ -140,7 +141,7 @@ void draw() {
 
   //if time is up, go to question 2
   if (timeCounter1 > 50) {
-    question1 = 2;
+    question = 2;
   }
 
 
@@ -148,7 +149,7 @@ void draw() {
 
 
 
-  if (question1==2) {
+  if (question==2) {
     fill(0);
     textSize(20);
     text("2. Who is the Leafs all time leader in goals?", 100, 200);
@@ -226,12 +227,12 @@ void draw() {
 
 
   if (timeCounter2 > 50) {
-    question1 = 3;
+    question = 3;
     timeCounter1 = 0;
   }
 
 
-  if (question1==3) {
+  if (question==3) {
 
     fill(0);
     textSize(20);
@@ -311,12 +312,12 @@ void draw() {
 
 
   if (timeCounter3 > 50) {
-    question1 = 4;
+    question = 4;
     timeCounter2 = 0;
   }
 
 
-  if (question1==4) {
+  if (question==4) {
 
     fill(0);
     textSize(20);
@@ -390,6 +391,90 @@ void draw() {
         score = score + 10;
       }
       answer16 = true;
+    }
+  }
+
+
+  if (timeCounter4 > 50) {
+    question = 5;
+    timeCounter3 = 0;
+  }
+
+
+  if (question==5) {
+
+    fill(0);
+    textSize(20);
+    text("5. Who is the Leafs current head coach?", 100, 200);
+
+    textSize(18);
+    text("a.) Peter Horachek", 160, 255);
+    text("b.) Mike Babcock", 160, 330);
+    text("c.) Randy Carlyle", 160, 405);
+    text("d.) Ron Wilson", 160, 480);
+
+
+
+    stroke(0);
+    fill(255);
+    if (answer17 == true) {
+      fill(255, 0, 0);
+      timeCounter5 = timeCounter5+1;
+    }
+    rect(100, 225, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer18 == true) {
+      fill(0, 255, 0);
+      timeCounter5 = timeCounter5+1;
+    }
+    rect(100, 300, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer19 == true) {
+      fill(255, 0, 0);
+      timeCounter5 = timeCounter5+1;
+    }
+    rect(100, 375, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer20 == true) {
+      fill(255, 0, 0);
+      timeCounter5 = timeCounter5+1;
+    }
+    rect(100, 450, 50, 50, 4);
+
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 225 && mouseY < 280) {
+      if (answer17 == false) {
+        score = score - 5;
+      }
+      answer17 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
+      if (answer18 == false) {
+        score = score + 10;
+        // question1= question1 + 1;
+      }
+      answer18 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 375 && mouseY < 425) {
+      if (answer19 == false) {
+        score = score - 5;
+      }
+      answer19 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 450 && mouseY < 500) {
+      if (answer20 == false) {
+        score = score - 5;
+      }
+      answer20 = true;
     }
   }
 }
