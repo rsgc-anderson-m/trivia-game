@@ -1,17 +1,17 @@
 //Matt Anderson
 //Trivia Game
 
-boolean answer1 = false;
-boolean answer2 = false;
-boolean answer3 = false;
-boolean answer4 = false;
+boolean answer1  = false;
+boolean answer2  = false;
+boolean answer3  = false;
+boolean answer4  = false;
 
-boolean answer5 = false;
-boolean answer6 = false;
-boolean answer7 = false;
-boolean answer8 = false;
+boolean answer5  = false;
+boolean answer6  = false;
+boolean answer7  = false;
+boolean answer8  = false;
 
-boolean answer9 = false;
+boolean answer9  = false;
 boolean answer10 = false;
 boolean answer11 = false;
 boolean answer12 = false;
@@ -26,11 +26,23 @@ boolean answer18 = false;
 boolean answer19 = false;
 boolean answer20 = false;
 
+boolean answer21 = false;
+boolean answer22 = false;
+boolean answer23 = false;
+boolean answer24 = false;
+
 int timeCounter1 = 0;
 int timeCounter2 = 0;
 int timeCounter3 = 0;
 int timeCounter4 = 0;
 int timeCounter5 = 0;
+int timeCounter6 = 0;
+int timeCounter7 = 0;
+int timeCounter8 = 0;
+int timeCounter9 = 0;
+int timeCounter10 = 0;
+int timeCounter11 = 0;
+
 
 int score = 0;
 int question = 1; //When this is 1 display question 1, when its 2, display question 2
@@ -321,12 +333,12 @@ void draw() {
 
     fill(0);
     textSize(20);
-    text("4. Who is the only Leafs to be drafted first overall?", 100, 200);
+    text("4. Who is the only Leaf player to be drafted first overall?", 100, 200);
 
     textSize(18);
     text("a.) Doug Gilmour", 160, 255);
     text("b.) Nazem Kadri", 160, 330);
-    text("c.) Colten Orr", 160, 405);
+    text("c.) Colton Orr", 160, 405);
     text("d.) Wendel Clark", 160, 480);
 
 
@@ -477,4 +489,95 @@ void draw() {
       answer20 = true;
     }
   }
+  
+  
+  
+  
+  if (timeCounter5 > 50) {
+    question = 6;
+    timeCounter4 = 0;
+  }
+
+
+  if (question==6) {
+
+    fill(0);
+    textSize(20);
+    text("6. How many Stanley Cups have the Leafs won?", 100, 200);
+
+    textSize(18);
+    text("a.) 8", 160, 255);
+    text("b.) 12", 160, 330);
+    text("c.) 13", 160, 405);
+    text("d.) 0", 160, 480);
+
+
+
+    stroke(0);
+    fill(255);
+    if (answer21 == true) {
+      fill(255, 0, 0);
+      timeCounter6 = timeCounter6+1;
+    }
+    rect(100, 225, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer22 == true) {
+      fill(255, 0, 0);
+      timeCounter6 = timeCounter6+1;
+    }
+    rect(100, 300, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer23 == true) {
+      fill(0, 255, 0);
+      timeCounter6 = timeCounter6+1;
+    }
+    rect(100, 375, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer24 == true) {
+      fill(255, 0, 0);
+      timeCounter6 = timeCounter6+1;
+    }
+    rect(100, 450, 50, 50, 4);
+
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 225 && mouseY < 280) {
+      if (answer21 == false) {
+        score = score - 5;
+      }
+      answer21 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
+      if (answer22 == false) {
+        score = score - 5;
+        // question1= question1 + 1;
+      }
+      answer22 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 375 && mouseY < 425) {
+      if (answer23 == false) {
+        score = score + 10;
+      }
+      answer23 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 450 && mouseY < 500) {
+      if (answer24 == false) {
+        score = score - 5;
+      }
+      answer24 = true;
+    }
+  }
+  
 }
+
+
+
+//how many cups have the leafs won (13)
