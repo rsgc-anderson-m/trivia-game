@@ -31,6 +31,16 @@ boolean answer22 = false;
 boolean answer23 = false;
 boolean answer24 = false;
 
+boolean answer25 = false;
+boolean answer26 = false;
+boolean answer27 = false;
+boolean answer28 = false;
+
+boolean answer29 = false;
+boolean answer30 = false;
+boolean answer31 = false;
+boolean answer32 = false;
+
 int timeCounter1 = 0;
 int timeCounter2 = 0;
 int timeCounter3 = 0;
@@ -39,10 +49,10 @@ int timeCounter5 = 0;
 int timeCounter6 = 0;
 int timeCounter7 = 0;
 int timeCounter8 = 0;
-int timeCounter9 = 0;
-int timeCounter10 = 0;
-int timeCounter11 = 0;
-
+// int timeCounter9 = 0;
+// int timeCounter10 = 0;
+// int timeCounter11 = 0;
+// int timeCounter12 = 0;
 
 int score = 0;
 int question = 1; //When this is 1 display question 1, when its 2, display question 2
@@ -78,8 +88,8 @@ void draw() {
     text("1. What was the Maple Leafs first arena called?", 100, 200);
 
     textSize(18);
-    text("a.) Wells Fargo Centre", 160, 255);
-    text("b.) Maple Leafs Garden", 160, 330);
+    text("a.) TD Garden", 160, 255);
+    text("b.) Maple Leaf Gardens", 160, 330);
     text("c.) Air Canada Centre", 160, 405);
     text("d.) Madison Square Garden", 160, 480);
 
@@ -576,8 +586,176 @@ void draw() {
     }
   }
   
+  
+  
+  
+  if (timeCounter6 > 50) {
+    question = 7;
+    timeCounter5 = 0;
+  }
+
+
+
+  if (question==7) {
+
+    fill(0);
+    textSize(20);
+    text("7. Who scored the most points in the 2014-15 season?", 100, 200);
+
+    textSize(18);
+    text("a.) Phil Kessel", 160, 255);
+    text("b.) James van Riemsdyk", 160, 330);
+    text("c.) Tyler Bozak", 160, 405);
+    text("d.) Nazem Kadri", 160, 480);
+
+
+
+    stroke(0);
+    fill(255);
+    if (answer25 == true) {
+      fill(0, 255, 0);
+      timeCounter7 = timeCounter7+1;
+    }
+    rect(100, 225, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer26 == true) {
+      fill(255, 0, 0);
+      timeCounter7 = timeCounter7+1;
+    }
+    rect(100, 300, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer27 == true) {
+      fill(255, 0, 0);
+      timeCounter7 = timeCounter7+1;
+    }
+    rect(100, 375, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer28 == true) {
+      fill(255, 0, 0);
+      timeCounter7 = timeCounter7+1;
+    }
+    rect(100, 450, 50, 50, 4);
+
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 225 && mouseY < 280) {
+      if (answer25 == false) {
+        score = score + 10;
+      }
+      answer25 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
+      if (answer26 == false) {
+        score = score - 5;
+        // question1= question1 + 1;
+      }
+      answer26 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 375 && mouseY < 425) {
+      if (answer27 == false) {
+        score = score - 5;
+      }
+      answer27 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 450 && mouseY < 500) {
+      if (answer28 == false) {
+        score = score - 5;
+      }
+      answer28 = true;
+    }
+  }
+  
+  
+  if (timeCounter7 > 50) {
+    question = 8;
+    timeCounter6 = 0;
+  }
+
+
+
+  if (question==8) {
+
+    fill(0);
+    textSize(20);
+    text("8. Which coach has the most wins as a Maple Leaf?", 100, 200);
+
+    textSize(18);
+    text("a.) Punch Imlach", 160, 255);
+    text("b.) Pat Burns", 160, 330);
+    text("c.) Pat Quinn", 160, 405);
+    text("d.) Mike Babcock", 160, 480);
+
+
+
+    stroke(0);
+    fill(255);
+    if (answer29 == true) {
+      fill(0, 255, 0);
+      timeCounter8 = timeCounter8+1;
+    }
+    rect(100, 225, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer30 == true) {
+      fill(255, 0, 0);
+      timeCounter8 = timeCounter8+1;
+    }
+    rect(100, 300, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer31 == true) {
+      fill(255, 0, 0);
+      timeCounter8 = timeCounter8+1;
+    }
+    rect(100, 375, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer32 == true) {
+      fill(255, 0, 0);
+      timeCounter8 = timeCounter8+1;
+    }
+    rect(100, 450, 50, 50, 4);
+
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 225 && mouseY < 280) {
+      if (answer29 == false) {
+        score = score + 10;
+      }
+      answer29 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
+      if (answer30 == false) {
+        score = score - 5;
+        // question1= question1 + 1;
+      }
+      answer30 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 375 && mouseY < 425) {
+      if (answer31 == false) {
+        score = score - 5;
+      }
+      answer31 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 450 && mouseY < 500) {
+      if (answer32 == false) {
+        score = score - 5;
+      }
+      answer32 = true;
+    }
+  }
+  
 }
-
-
-
-//how many cups have the leafs won (13)
