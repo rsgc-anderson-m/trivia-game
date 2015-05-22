@@ -310,86 +310,86 @@ void draw() {
 
 
 
-//   if (timeCounter3 > 50) {
-//     question1 = 4;
-//     timeCounter2 = 0;
-//   }
+  if (timeCounter3 > 50) {
+    question1 = 4;
+    timeCounter2 = 0;
+  }
 
 
-//   if (question1==4) {
+  if (question1==4) {
 
-//     fill(0);
-//     textSize(20);
-//     text("4. Who is the only Leafs to be drafted first overall?", 100, 200);
+    fill(0);
+    textSize(20);
+    text("4. Who is the only Leafs to be drafted first overall?", 100, 200);
 
-//     textSize(18);
-//     text("a.) Doug Gilmour", 160, 255);
-//     text("b.) Nazem Kadri", 160, 330);
-//     text("c.) Colten Orr", 160, 405);
-//     text("d.) Wendel Clark", 160, 480);
-
-
-
-//     stroke(0);
-//     fill(255);
-//     if (answer13 == true) {
-//       fill(255, 0, 0);
-//       timeCounter4 = timeCounter4+1;
-//     }
-//     rect(100, 225, 50, 50, 4);
-
-//     stroke(0);
-//     fill(255);
-//     if (answer14 == true) {
-//       fill(255, 0, 0);
-//       timeCounter4 = timeCounter4+1;
-//     }
-//     rect(100, 300, 50, 50, 4);
-
-//     stroke(0);
-//     fill(255);
-//     if (answer15 == true) {
-//       fill(255, 0, 0);
-//       timeCounter4 = timeCounter4+1;
-//     }
-//     rect(100, 375, 50, 50, 4);
-
-//     stroke(0);
-//     fill(255);
-//     if (answer16 == true) {
-//       fill(0, 255, 0);
-//       timeCounter4 = timeCounter4+1;
-//     }
-//     rect(100, 450, 50, 50, 4);
+    textSize(18);
+    text("a.) Doug Gilmour", 160, 255);
+    text("b.) Nazem Kadri", 160, 330);
+    text("c.) Colten Orr", 160, 405);
+    text("d.) Wendel Clark", 160, 480);
 
 
-//     if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 225 && mouseY < 280) {
-//       if (answer13 == false) {
-//         score = score - 5;
-//       }
-//       answer13 = true;
-//     }
 
-//     if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
-//       if (answer14 == false) {
-//         score = score - 5;
-//         // question1= question1 + 1;
-//       }
-//       answer14 = true;
-//     }
+    stroke(0);
+    fill(255);
+    if (answer13 == true) {
+      fill(255, 0, 0);
+      timeCounter4 = timeCounter4+1;
+    }
+    rect(100, 225, 50, 50, 4);
 
-//     if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 375 && mouseY < 425) {
-//       if (answer15 == false) {
-//         score = score - 5;
-//       }
-//       answer15 = true;
-//     }
+    stroke(0);
+    fill(255);
+    if (answer14 == true) {
+      fill(255, 0, 0);
+      timeCounter4 = timeCounter4+1;
+    }
+    rect(100, 300, 50, 50, 4);
 
-//     if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 450 && mouseY < 500) {
-//       if (answer16 == false) {
-//         score = score + 10;
-//       }
-//       answer16 = true;
-//     }
-//   }
+    stroke(0);
+    fill(255);
+    if (answer15 == true) {
+      fill(255, 0, 0);
+      timeCounter4 = timeCounter4+1;
+    }
+    rect(100, 375, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer16 == true) {
+      fill(0, 255, 0);
+      timeCounter4 = timeCounter4+1;
+    }
+    rect(100, 450, 50, 50, 4);
+
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 225 && mouseY < 280) {
+      if (answer13 == false) {
+        score = score - 5;
+      }
+      answer13 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
+      if (answer14 == false) {
+        score = score - 5;
+        // question1= question1 + 1;
+      }
+      answer14 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 375 && mouseY < 425) {
+      if (answer15 == false) {
+        score = score - 5;
+      }
+      answer15 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 450 && mouseY < 500) {
+      if (answer16 == false) {
+        score = score + 10;
+      }
+      answer16 = true;
+    }
+  }
 }
