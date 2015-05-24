@@ -41,6 +41,17 @@ boolean answer30 = false;
 boolean answer31 = false;
 boolean answer32 = false;
 
+boolean answer33 = false;
+boolean answer34 = false;
+boolean answer35 = false;
+boolean answer36 = false;
+
+boolean answer37 = false;
+boolean answer38 = false;
+boolean answer39 = false;
+boolean answer40 = false;
+
+
 int timeCounter1 = 0;
 int timeCounter2 = 0;
 int timeCounter3 = 0;
@@ -49,10 +60,9 @@ int timeCounter5 = 0;
 int timeCounter6 = 0;
 int timeCounter7 = 0;
 int timeCounter8 = 0;
-// int timeCounter9 = 0;
-// int timeCounter10 = 0;
-// int timeCounter11 = 0;
-// int timeCounter12 = 0;
+int timeCounter9 = 0;
+int timeCounter10 = 0;
+
 
 int score = 0;
 int question = 1; //When this is 1 display question 1, when its 2, display question 2
@@ -68,6 +78,8 @@ void setup() {
 
 void draw() {
 
+
+
   background(255);
 
   fill(0, 0, 255);
@@ -77,9 +89,6 @@ void draw() {
   fill(0);
   textSize(30);
   text("Score: " + score, width-225, 50);
-
-  // text (timeCounter1, 30, 30);
-  // text (timeCounter2, 60, 30);
 
 
   if (question==1) {
@@ -139,7 +148,6 @@ void draw() {
     if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
       if (answer2 == false) {
         score = score + 10;
-        // question1= question1 +1;
       }
       answer2 = true;
     }
@@ -227,7 +235,6 @@ void draw() {
     if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
       if (answer6 == false) {
         score = score - 5;
-        // question1= question1 + 1;
       }
       answer6 = true;
     }
@@ -311,7 +318,6 @@ void draw() {
     if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
       if (answer10 == false) {
         score = score - 5;
-        // question1= question1 + 1;
       }
       answer10 = true;
     }
@@ -396,7 +402,6 @@ void draw() {
     if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
       if (answer14 == false) {
         score = score - 5;
-        // question1= question1 + 1;
       }
       answer14 = true;
     }
@@ -480,7 +485,6 @@ void draw() {
     if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
       if (answer18 == false) {
         score = score + 10;
-        // question1= question1 + 1;
       }
       answer18 = true;
     }
@@ -499,10 +503,10 @@ void draw() {
       answer20 = true;
     }
   }
-  
-  
-  
-  
+
+
+
+
   if (timeCounter5 > 50) {
     question = 6;
     timeCounter4 = 0;
@@ -566,7 +570,6 @@ void draw() {
     if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
       if (answer22 == false) {
         score = score - 5;
-        // question1= question1 + 1;
       }
       answer22 = true;
     }
@@ -585,10 +588,10 @@ void draw() {
       answer24 = true;
     }
   }
-  
-  
-  
-  
+
+
+
+
   if (timeCounter6 > 50) {
     question = 7;
     timeCounter5 = 0;
@@ -653,7 +656,6 @@ void draw() {
     if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
       if (answer26 == false) {
         score = score - 5;
-        // question1= question1 + 1;
       }
       answer26 = true;
     }
@@ -672,8 +674,8 @@ void draw() {
       answer28 = true;
     }
   }
-  
-  
+
+
   if (timeCounter7 > 50) {
     question = 8;
     timeCounter6 = 0;
@@ -738,7 +740,6 @@ void draw() {
     if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
       if (answer30 == false) {
         score = score - 5;
-        // question1= question1 + 1;
       }
       answer30 = true;
     }
@@ -757,5 +758,190 @@ void draw() {
       answer32 = true;
     }
   }
-  
+
+
+  if (timeCounter8 > 50) {
+    question = 9;
+    timeCounter7 = 0;
+  }
+
+
+
+  if (question==9) {
+
+    fill(0);
+    textSize(20);
+    text("9. Who is the Leafs current captain?", 100, 200);
+
+    textSize(18);
+    text("a.) Joffrey Lupul", 160, 255);
+    text("b.) Tyler Bozak", 160, 330);
+    text("c.) James Reimer", 160, 405);
+    text("d.) Dion Phaneuf", 160, 480);
+
+
+
+    stroke(0);
+    fill(255);
+    if (answer33 == true) {
+      fill(255, 0, 0);
+      timeCounter9 = timeCounter9+1;
+    }
+    rect(100, 225, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer34 == true) {
+      fill(255, 0, 0);
+      timeCounter9 = timeCounter9+1;
+    }
+    rect(100, 300, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer35 == true) {
+      fill(255, 0, 0);
+      timeCounter9 = timeCounter9+1;
+    }
+    rect(100, 375, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer36 == true) {
+      fill(0, 255, 0);
+      timeCounter9 = timeCounter9+1;
+    }
+    rect(100, 450, 50, 50, 4);
+
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 225 && mouseY < 280) {
+      if (answer33 == false) {
+        score = score - 5;
+      }
+      answer33 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
+      if (answer34 == false) {
+        score = score - 5;
+      }
+      answer34 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 375 && mouseY < 425) {
+      if (answer35 == false) {
+        score = score - 5;
+      }
+      answer35 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 450 && mouseY < 500) {
+      if (answer36 == false) {
+        score = score + 10;
+      }
+      answer36 = true;
+    }
+  }
+
+  if (timeCounter9 > 50) {
+    question = 10;
+    timeCounter8 = 0;
+  }
+
+
+
+  if (question==10) {
+
+    fill(0);
+    textSize(20);
+    text("10. Who is the best goalie in Leafs history?", 100, 200);
+
+    textSize(18);
+    text("a.) Turk Broda", 160, 255);
+    text("b.) James Reimer", 160, 330);
+    text("c.) Johnny Bower", 160, 405);
+    text("d.) Curtis Joseph", 160, 480);
+
+
+
+    stroke(0);
+    fill(255);
+    if (answer37 == true) {
+      fill(255, 0, 0);
+      timeCounter10 = timeCounter10+1;
+    }
+    rect(100, 225, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer38 == true) {
+      fill(0, 255, 0);
+      timeCounter10 = timeCounter10+1;
+    }
+    rect(100, 300, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer39 == true) {
+      fill(255, 0, 0);
+      timeCounter10 = timeCounter10+1;
+    }
+    rect(100, 375, 50, 50, 4);
+
+    stroke(0);
+    fill(255);
+    if (answer40 == true) {
+      fill(255, 0, 0);
+      timeCounter10 = timeCounter10+1;
+    }
+    rect(100, 450, 50, 50, 4);
+
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 225 && mouseY < 280) {
+      if (answer37 == false) {
+        score = score - 5;
+      }
+      answer37 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 300 && mouseY < 350) {
+      if (answer38 == false) {
+        score = score + 10;
+      }
+      answer38 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 375 && mouseY < 425) {
+      if (answer39 == false) {
+        score = score - 5;
+      }
+      answer39 = true;
+    }
+
+    if (mousePressed&& mouseX > 100 && mouseX < 150 && mouseY > 450 && mouseY < 500) {
+      if (answer40 == false) {
+        score = score - 5;
+      }
+      answer40 = true;
+    }
+  }
+
+  if (timeCounter10 > 50) {
+    question = 11;
+    timeCounter9 = 0;
+  }
+
+
+
+  if (question==11) {
+
+    background(0, 0, 255);
+
+    fill(255);
+    strokeWeight(30);
+    textSize(200);
+    text("The End", 250, 400);
+    textSize(100);
+    text("Score: " + score, 400, 600);
+  }
 }
