@@ -933,15 +933,15 @@ void draw() {
 
 
 
-  // if (question==11) {
+  if (question==11) {
 
-  //   background(0, 0, 255);
+    background(0, 0, 255);
 
-  //   fill(255);
-  //   strokeWeight(30);
-  //   textSize(200);
-  //   text("The End", 250, 400);
-  //   textSize(100);
-  //   text("Score: " + score, 400, 600);
-  // }
+    fill(255);
+    strokeWeight(30);
+    textSize(200);
+    text("The End", 250, 400);
+    textSize(100);
+    text("Score: " + score, 400, 600);
+  }
 }
